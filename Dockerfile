@@ -4,6 +4,10 @@ ARG USER_ID
 ARG GROUP_ID
 
 RUN \
+  /bin/bash -c "if [[ -z \"$USER_ID\" ]] ; then exit 1 ; fi" && \
+  /bin/bash -c "if [[ -z \"$GROUP_ID\" ]] ; then exit 1 ; fi"
+
+RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     fd-find \
