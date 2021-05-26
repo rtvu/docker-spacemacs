@@ -2,4 +2,8 @@
 
 SCRIPT_DIRECTORY=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-docker-compose --file "$SCRIPT_DIRECTORY/docker-compose.yml" run --rm --name spacemacs spacemacs-application
+if [ -d "$SCRIPT_DIRECTORY/org" ] ; then
+  docker-compose --file "$SCRIPT_DIRECTORY/docker-compose.yml" run --rm --name spacemacs spacemacs-application
+else
+  echo "Cannot find \"org\""
+fi

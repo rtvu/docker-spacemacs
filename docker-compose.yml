@@ -8,9 +8,9 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./install-spacemacs:/home/spacemacs/install-spacemacs
-      - ./.spacemacs.d/configuration:/home/spacemacs/.spacemacs.d/configuration
-      - ./.spacemacs.d/init.el:/home/spacemacs/.spacemacs.d/init.el
       - spacemacs-.emacs.d-volume:/home/spacemacs/.emacs.d
+      - ./.spacemacs.d:/home/spacemacs/.spacemacs.d
+      - ./org:/home/spacemacs/org
     network_mode: host
 volumes:
   spacemacs-.emacs.d-volume:
