@@ -12,5 +12,6 @@ services:
       - ./.spacemacs.d:/home/spacemacs/.spacemacs.d
       - ./org:/home/spacemacs/org
     network_mode: host
+    privileged: true
 volumes:
   spacemacs-.emacs.d-volume:

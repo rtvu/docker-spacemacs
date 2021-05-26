@@ -5,6 +5,7 @@ Container for Spacemacs.
 ## Notes
 
 * GUI is enabled by forwarding host's X socket.
+* Container is running in `privileged mode`.
 * Container's `.emacs.d` is persisted in a volume.
 * `./.spacemacs.d` is mounted into container.
 * `./org` is mounted into container.
