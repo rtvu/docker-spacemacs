@@ -2,4 +2,4 @@
 
 SCRIPT_DIRECTORY=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-docker-compose --file "$SCRIPT_DIRECTORY/docker-compose.yml" build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g)
+docker-compose --file "$SCRIPT_DIRECTORY/docker-compose.yml" build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --pull
