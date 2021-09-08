@@ -12,16 +12,16 @@ Container for Spacemacs.
 
 ## Scripts
 
-* `build`: builds container with user's UID and GID
-* `launch`: launches container
+* `build-container`: builds container with user's UID and GID
+* `launch-container`: launches container
 * `install-spacemacs`: run inside container to install/reinstall spacemacs `.emacs.d`
 
 ## Usage
 
 ```bash
 # On host
-> ./build
-> ./launch
+> ./build-container
+> ./launch-container
 
 # Inside container
 > ./install-spacemacs # Only if spacemacs is not configured
